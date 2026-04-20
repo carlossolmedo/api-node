@@ -9,7 +9,7 @@ services:
     networks: 
       - web    
     volumes:
-      - node_modules:/api
+      - node_modules:/apinode/node_modules
     labels:
       - "traefik.enable=true"
       - "traefik.port=4000"

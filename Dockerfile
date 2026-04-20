@@ -1,14 +1,13 @@
-FROM node:alpine3.10
+FROM node:18-alpine
 
 RUN mkdir -p /apinode
 WORKDIR /apinode
 
-COPY package.json /
-COPY yarn.lock /
+COPY package.json yarn.lock ./
 
-RUN yarn install
+RUN yarn install --production
 
-COPY . /
+COPY . .
 
 EXPOSE 4000
 
